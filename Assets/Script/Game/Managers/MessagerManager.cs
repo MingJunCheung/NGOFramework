@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -27,5 +28,18 @@ public class MessagerManager : Single<MessagerManager>
         FastBufferWriter messagePayload = new FastBufferWriter();
         messagePayload.WriteValueSafe(100);
         NetworkManager.Singleton.CustomMessagingManager.SendUnnamedMessage( clientId, messagePayload);
+    }
+
+    /// <summary>
+    /// ·¢ÏûÏ¢
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="message"></param>
+    public void SendMessageThroughNetwork<T>(T message) where T : unmanaged,INetworkSerializeByMemcpy
+    {
+        var writer = new FastBufferWriter(FastBufferWriter.GetWriteSize<T>(), Allocator.Temp);
+        writer.WriteValueSafe(message);
+        string name = "";
+        NetworkManager.Singleton.CustomMessagingManager.SendNamedMessageToAll(name, writer);
     }
 }
