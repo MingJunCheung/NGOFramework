@@ -1,29 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
-using UnityEditorInternal;
 using UnityEngine;
-using VContainer;
 
 public class Laucher : MonoBehaviour
 {
     public LaucherType laucherType = LaucherType.None;
 
+    //[Inject]
+    //public void Start1()
+    //{
+    //    Debug.Log($"Start1()");
+    //}
 
 
-    [Inject]
-    public void Start1()
-    {
-        Debug.Log($"Start1()");
-    }
-
-
-    [Inject]
     void Start()
     {
-        Debug.Log($"Start()");
-        return;
         DontDestroyOnLoad(this);
         GameManager.Instance.Init(this);
         GameObject go = Resources.Load("NetManager") as GameObject;

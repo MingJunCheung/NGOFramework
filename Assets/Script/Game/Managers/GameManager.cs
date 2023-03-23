@@ -69,14 +69,13 @@ public class GameManager : Single<GameManager>
     private void OnClientConnected(ulong clientIndex)
     {
         Debug.Log($"{clientIndex}号客户端连接，当前连接客户端数量：{NetworkManager.Singleton.ConnectedClients.Count}");
-        //NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler();
-
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(clientIndex.ToString(),MessagerManager.Instance.OnSendNamedMsg);
     }
 
     private void OnClientDisConnected(ulong clientIndex)
     {
         Debug.Log($"{clientIndex}号客户端断开连接，当前连接客户端数量：{NetworkManager.Singleton.ConnectedClients.Count}");
-        //NetworkManager.Singleton.CustomMessagingManager.UnregisterNamedMessageHandler();
+        NetworkManager.Singleton.CustomMessagingManager.UnregisterNamedMessageHandler(clientIndex.ToString());
     }
 
     private void OnServerStartUp()
