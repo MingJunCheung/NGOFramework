@@ -42,7 +42,6 @@ public class GameManager : Single<GameManager>
         {
             UIManager.Instance.Init();
             NetworkManager.Singleton.StartClient();
-
         }
         else if (laucherType == LaucherType.Server)
         {
@@ -82,6 +81,11 @@ public class GameManager : Single<GameManager>
     {
         Debug.Log($"·þÎñÆ÷Æô¶¯£¡ip:{NetworkManager.Singleton.GetComponentInParent<UnityTransport>().ConnectionData.Address}," +
             $"port:{NetworkManager.Singleton.GetComponentInParent<UnityTransport>().ConnectionData.Port}");
+
+        GameObject go = Resources.Load("Items/Item_Cube") as GameObject;
+        NetworkObject netObj = GameObject.Instantiate(go).GetComponent<NetworkObject>();
+        netObj.Spawn();
+        NetworkManager.Singleton.AddNetworkPrefab(netObj.gameObject);
     }
 
 
