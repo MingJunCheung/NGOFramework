@@ -17,7 +17,7 @@ public class UIMain : UIBase
 
     public void OnBtn1Click()
     {
-        MessagerManager.Instance.SendNamedMsg(4);
+        MessagerManager.Instance.unnamedMsgHandler.SendUnNamedMsg("ÄãºÃ·şÎñÆ÷£¡");
     }
 
     public void OnBtn2Click()

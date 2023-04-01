@@ -48,11 +48,14 @@ public class GameManager : Single<GameManager>
             NetworkManager.Singleton.StartServer();
         }
 
-        //InitNetComponentJob initNetComponentJob = new InitNetComponentJob();
-        //InitTableJob initTableJob = new InitTableJob();
-        //InitUIManagerJob initUIManagerJob = new InitUIManagerJob();
+        MessagerManager.Instance.InitUnamedMessageHandler(NetworkManager.Singleton);
 
-        //JobHandle = initUIManagerJob.Schedule();
+
+        if (NetworkManager.Singleton.IsServer)
+        {
+            MessagerManager.Instance.unnamedMsgHandler.SendUnNamedMsg("hello MyClient!");
+        }
+
     }
 
     public void StartClient()
@@ -67,14 +70,15 @@ public class GameManager : Single<GameManager>
 
     private void OnClientConnected(ulong clientIndex)
     {
-        Debug.Log($"{clientIndex}号客户端连接，当前连接客户端数量：{NetworkManager.Singleton.ConnectedClients.Count}");
-        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(clientIndex.ToString(),MessagerManager.Instance.OnSendNamedMsg);
+        //Debug.Log($"{clientIndex}号客户端连接，当前连接客户端数量：{NetworkManager.Singleton.ConnectedClients.Count}");
+        //NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler
+        //    (clientIndex.ToString(), MessagerManager.Instance.OnSendNamedMsg);
     }
 
     private void OnClientDisConnected(ulong clientIndex)
     {
-        Debug.Log($"{clientIndex}号客户端断开连接，当前连接客户端数量：{NetworkManager.Singleton.ConnectedClients.Count}");
-        NetworkManager.Singleton.CustomMessagingManager.UnregisterNamedMessageHandler(clientIndex.ToString());
+        //Debug.Log($"{clientIndex}号客户端断开连接，当前连接客户端数量：{NetworkManager.Singleton.ConnectedClients.Count}");
+        //NetworkManager.Singleton.CustomMessagingManager.UnregisterNamedMessageHandler(clientIndex.ToString());
     }
 
     private void OnServerStartUp()
@@ -82,10 +86,10 @@ public class GameManager : Single<GameManager>
         Debug.Log($"服务器启动！ip:{NetworkManager.Singleton.GetComponentInParent<UnityTransport>().ConnectionData.Address}," +
             $"port:{NetworkManager.Singleton.GetComponentInParent<UnityTransport>().ConnectionData.Port}");
 
-        GameObject go = Resources.Load("Items/Item_Cube") as GameObject;
-        NetworkObject netObj = GameObject.Instantiate(go).GetComponent<NetworkObject>();
-        netObj.Spawn();
-        NetworkManager.Singleton.AddNetworkPrefab(netObj.gameObject);
+        //GameObject go = Resources.Load("Items/Item_Cube") as GameObject;
+        //NetworkObject netObj = GameObject.Instantiate(go).GetComponent<NetworkObject>();
+        //netObj.Spawn();
+        //NetworkManager.Singleton.AddNetworkPrefab(netObj.gameObject);
     }
 
 

@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class MessagerManager : Single<MessagerManager>
 {
+    public UnnamedMessageHandler unnamedMsgHandler;
+
+
     public void OnRecievNamedMsg(ulong clientId, FastBufferReader messagePayload)
     {
         Debug.Log($"收到消息：{messagePayload.ToString()}");
@@ -41,5 +44,25 @@ public class MessagerManager : Single<MessagerManager>
         writer.WriteValueSafe(message);
         string name = "";
         NetworkManager.Singleton.CustomMessagingManager.SendNamedMessageToAll(name, writer);
+    }
+
+    /// <summary>
+    /// 发消息
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="message"></param>
+    public void SendMessage(MessageTest message)
+    {
+        //FastBufferWriter.GetWriteSize()
+        //var writer = new FastBufferWriter(FastBufferWriter.GetWriteSize(), Allocator.Temp);
+        //writer.WriteValueSafe(message);
+        //string name = "";
+        //NetworkManager.Singleton.CustomMessagingManager.SendNamedMessageToAll(name, writer);
+    }
+
+
+    public void InitUnamedMessageHandler(NetworkManager netManager)
+    {
+        unnamedMsgHandler = new UnnamedMessageHandler(netManager);
     }
 }
