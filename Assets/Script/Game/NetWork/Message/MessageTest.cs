@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public struct MessageTest : INetworkSerializeByMemcpy
+public struct MessageTest : INetworkSerializable
 {
+    public int type; 
     public int id;
     public string str;
+
+    public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
+    {
+        serializer.SerializeValue(ref type);
+        serializer.SerializeValue(ref id);
+        serializer.SerializeValue(ref str);
+    }
 }
 
 struct MyComplexStruct : INetworkSerializable
@@ -24,11 +33,22 @@ struct MyComplexStruct : INetworkSerializable
     // ~INetworkSerializable
 }
 
-public struct MessageBase : INetworkSerializable
+public struct MessageBase : INetworkSerializeByMemcpy
+{
+    public int msgType;
+    public float time;
+    //public nav
+}
+
+public struct MessageLogin : INetworkSerializable
 {
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
-        //serializer.SerializeValue(ref Position);
-        //serializer.SerializeValue(ref Rotation);
+        throw new System.NotImplementedException();
     }
 }
+
+//public struct MessageTest1 : MessageBase
+//{
+//    public int msgType;
+//}
