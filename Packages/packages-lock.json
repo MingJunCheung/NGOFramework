@@ -201,6 +201,12 @@
       },
       "url": "https://packages.unity.cn"
     },
+    "com.veriorpies.parrelsync": {
+      "version": "file:../Plugins/ParrelSync-master/ParrelSync-master/ParrelSync",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "jp.hadashikick.vcontainer": {
       "version": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.13.1",
       "depth": 0,
