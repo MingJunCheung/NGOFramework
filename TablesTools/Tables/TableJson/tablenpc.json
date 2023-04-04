@@ -1,0 +1,182 @@
+[
+  {
+    "id": 10000,
+    "name": "匪徒1",
+    "weponIds": [
+      10001
+    ],
+    "model": "FeiTu",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10001,
+    "name": "匪徒2",
+    "weponIds": [
+      10001
+    ],
+    "model": "weiguan",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10002,
+    "name": "匪徒3",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_01",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10003,
+    "name": "匪徒4",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_02",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10004,
+    "name": "匪徒5",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_03",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10005,
+    "name": "匪徒6",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_04",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10006,
+    "name": "匪徒7",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_05",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10007,
+    "name": "匪徒8",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_06",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10008,
+    "name": "匪徒9",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_07",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10009,
+    "name": "匪徒10",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_08",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10010,
+    "name": "匪徒11",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_09",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  },
+  {
+    "id": 10011,
+    "name": "匪徒12",
+    "weponIds": [
+      10001
+    ],
+    "model": "NPC_010",
+    "hp": 100,
+    "power": 100,
+    "walkSpeed": 2,
+    "runSpeed": 4,
+    "visionDistance": 10,
+    "visionAngle": 90,
+    "hearing": 20
+  }
+]

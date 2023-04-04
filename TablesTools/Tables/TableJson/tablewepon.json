@@ -1,0 +1,38 @@
+[
+  {
+    "id": 10000,
+    "name": "盾牌",
+    "damage": 10,
+    "prefab": "Equip_Shield",
+    "controller": 30,
+    "actionEvent": "dunpaiPush",
+    "hand": 1
+  },
+  {
+    "id": 10001,
+    "name": "92手枪",
+    "damage": 50,
+    "prefab": "Equip_Pistol92",
+    "controller": 65,
+    "actionEvent": "fire2Npc",
+    "hand": 2
+  },
+  {
+    "id": 10002,
+    "name": "警棍",
+    "damage": 25,
+    "prefab": "Equip_Jinggun",
+    "controller": 23,
+    "actionEvent": "jinggunAtk",
+    "hand": 2
+  },
+  {
+    "id": 10003,
+    "name": "95步枪",
+    "damage": 50,
+    "prefab": "Equip_95",
+    "controller": 4,
+    "actionEvent": "fire2Npc",
+    "hand": 2
+  }
+]

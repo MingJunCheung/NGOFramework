@@ -1,0 +1,41 @@
+[
+  {
+    "id": 10000,
+    "Scene": "昆山南站民众砍人事件",
+    "sceneName": "111",
+    "linkPlayerNum": 4,
+    "defaultSelect": 1,
+    "randomNpc": 0,
+    "npcNum": 2,
+    "npcList": [
+      10000,
+      10001
+    ],
+    "randomRoom": 0,
+    "randomNum": 0
+  },
+  {
+    "id": 10001,
+    "Scene": "宾馆",
+    "sceneName": "BinguanScene",
+    "linkPlayerNum": 1,
+    "defaultSelect": 0,
+    "randomNpc": 1,
+    "npcNum": 7,
+    "npcList": [],
+    "randomRoom": 1,
+    "randomNum": 6
+  },
+  {
+    "id": 10002,
+    "Scene": "居民楼",
+    "sceneName": "XiaoquScene",
+    "linkPlayerNum": 1,
+    "defaultSelect": 0,
+    "randomNpc": 1,
+    "npcNum": 3,
+    "npcList": [],
+    "randomRoom": 0,
+    "randomNum": 0
+  }
+]

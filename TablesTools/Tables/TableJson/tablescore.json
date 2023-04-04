@@ -1,0 +1,74 @@
+[
+  {
+    "id": 10000,
+    "name": "speakScore1",
+    "score": 10,
+    "times": 1,
+    "npcState": [
+      1
+    ]
+  },
+  {
+    "id": 10001,
+    "name": "speakScore2",
+    "score": 0,
+    "times": 1,
+    "npcState": [
+      2
+    ]
+  },
+  {
+    "id": 10002,
+    "name": "speakScore3",
+    "score": 20,
+    "times": 1,
+    "npcState": [
+      3
+    ]
+  },
+  {
+    "id": 10003,
+    "name": "jinggunScore",
+    "score": 10,
+    "times": 1,
+    "npcState": [
+      2
+    ]
+  },
+  {
+    "id": 10004,
+    "name": "shangbaoScore",
+    "score": 10,
+    "times": 1,
+    "npcState": [
+      5
+    ]
+  },
+  {
+    "id": 10005,
+    "name": "dunpaiScore",
+    "score": 10,
+    "times": 1,
+    "npcState": [
+      2
+    ]
+  },
+  {
+    "id": 10006,
+    "name": "fire2airScore",
+    "score": 20,
+    "times": 1,
+    "npcState": [
+      3
+    ]
+  },
+  {
+    "id": 10007,
+    "name": "fire2npcScore",
+    "score": 40,
+    "times": 1,
+    "npcState": [
+      4
+    ]
+  }
+]
